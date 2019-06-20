@@ -25,9 +25,3 @@ Install ALL
 export ENFORCERD_NAMESPACE=/jody/abc
 sudo ./install all
 ```
-
-## Quick
-Requires that ENFORCERD_NAMESPACE is set and you are root
-```
-curl -L -o install https://tinyurl.com/y2f94eja | bash all
-```

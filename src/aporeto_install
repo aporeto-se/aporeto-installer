@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script is written to be stable over long periods of time. It does this by downloading and executing the
+# real script at each execution. You can include this script in a golden image.
 
 tmp=$(mktemp)
 function finish { rm -rf $tmp; }

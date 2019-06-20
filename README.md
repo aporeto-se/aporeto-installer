@@ -4,7 +4,7 @@ Script to install Aporeto apoctl, enforcerd and useful utilities
 ## Example
 Download script
 ```
-curl -L -o install https://tinyurl.com/yxmv25rz
+curl -L -o install https://tinyurl.com/y2f94eja
 chmod +x install
 ```
 Install enforcerd
@@ -29,5 +29,5 @@ sudo ./install all
 ## Quick
 Requires that ENFORCERD_NAMESPACE is set and you are root
 ```
-curl -L -o install https://tinyurl.com/yxmv25rz | bash all
+curl -L -o install https://tinyurl.com/y2f94eja | bash all
 ```

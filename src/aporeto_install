@@ -3,6 +3,6 @@
 tmp=$(mktemp)
 function finish { rm -rf $tmp; }
 trap finish EXIT
-curl -s -L -o $tmp https://github.com/aporeto-se/aporeto-installer/releases/download/v1.0/aporeto_real_install
+curl -s -L -o $tmp https://raw.githubusercontent.com/aporeto-se/aporeto-installer/master/src/aporeto_real_install
 chmod +x $tmp
 $tmp $@

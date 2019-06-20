@@ -10,7 +10,7 @@ function main() {
   [ "$1" == "apoctl" ] && { apoctl_install_main $@; return $?; }
   [ "$1" == "tools" ] && { tools_install_main $@; return $?; }
   [ "$1" == "all" ] && { all_install_main $@; return $?; }
-  err "Usage: $0 (enforcerd|apoctl|tools|all)"
+  err "Usage: (enforcerd|apoctl|tools|all)"
 }
 
 function enforcerd_install_main() {

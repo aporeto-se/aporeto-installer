@@ -1,5 +1,5 @@
-# aporeto-installer
-Scripts to install Aporeto apoctl, enforcerd and useful utilities
+# Overview
+Script to install Aporeto apoctl, enforcerd and useful utilities
 
 ## Example
 Download script

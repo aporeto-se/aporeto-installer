@@ -38,4 +38,11 @@ ENFORCERD_OPTS=
 - Aporeto apoctl utility
 - jq (JSON CLI Parser)
 - jwt (JSOWN web token parser)
-- enforcer-watch (tails the enforcerd log by looking up active pid)
+- enforcer-watch (writes the current log file to STDOUT)
+
+## Enforcer watch tool
+This tool writes the current enforcerd log file name to STDOUT. Here are some examples of using this command.
+```
+less $(enforcer-watch)
+tail -f $(enforcer-watch)
+```

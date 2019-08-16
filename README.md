@@ -1,11 +1,12 @@
 # Overview
 Script to install Aporeto apoctl, enforcerd and useful utilities
 
-## Example
-Download script
+## Install
+
 ```
 curl -L -o install https://tinyurl.com/y2f94eja && chmod +x install
 ```
+
 Install enforcerd
 ```
 export ENFORCERD_NAMESPACE=/jody/abc && sudo ./install enforcerd

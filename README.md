@@ -18,6 +18,17 @@ export ENFORCERD_NAMESPACE=/abc/123
 sudo ./install
 ```
 
-### Aporeto Vars
+### Aporeto Environment Variables
 You can set any of these before executing the script and they will be included in the /etc/enforcerd.conf file. Note that you must send ENFORCERD_NAMESPACE or ENFORCERD_APPCREDS before starting the enforcerd service.
-The vars are: ENFORCERD_API, ENFORCERD_API_CACERT, ENFORCERD_NAMESPACE, ENFORCERD_LOG_TO_CONSOLE, ENFORCERD_LOG_FORMAT, ENFORCERD_LOG_LEVEL, ENFORCERD_APPCREDS, ENFORCERD_OPTS
+
+The environment variables are as follows
+```
+ENFORCERD_API=
+ENFORCERD_API_CACERT=
+ENFORCERD_NAMESPACE=
+ENFORCERD_LOG_TO_CONSOLE=
+ENFORCERD_LOG_FORMAT=
+ENFORCERD_LOG_LEVEL=
+ENFORCERD_APPCREDS=
+ENFORCERD_OPTS=
+```

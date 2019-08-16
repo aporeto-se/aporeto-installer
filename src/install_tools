@@ -3,6 +3,7 @@
 APOCTL_URL="https://download.aporeto.com/releases/release-3.9.2/apoctl/linux/apoctl"
 JQ_URL="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64"
 JWT_URL="https://github.com/aporeto-se/jwt/releases/download/v1.0/jwt"
+ENFORCER_WATCH_URL="https://raw.githubusercontent.com/aporeto-se/aporeto-installer/master/src/enforcer-watch"
 
 function main() {
   [ $EUID -eq 0 ] || { err "Must be root"; return 2; }
@@ -12,6 +13,8 @@ function main() {
   chmod +x /usr/bin/jq || return 3
   curl -s -L -o /usr/bin/jwt $JWT_URL || return 3
   chmod +x /usr/bin/jwt || return 3
+  curl -s -L -o /usr/bin/enforcer-watch $ENFORCER_WATCH_URL || return 3
+  chmod +x /usr/bin/enforcer-watch || return 3
 }
 
 err() { echo "$@" 1>&2; }

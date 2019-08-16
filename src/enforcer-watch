@@ -6,8 +6,7 @@ main() {
   pid=$(systemctl status enforcerd | grep "Main PID" | awk '{print $3}')
   [[ $pid ]] || { err "Enforcerd is not running"; return 2; }
   logfile=$LOG_FILE_DIR/enforcer-${pid}.log
-  [ -f $logfile ] || { err "Logfile $logfile not found"; return 3; }
-  tail -f $logfile
+  echo $logfile
 }
 
 err() { echo "$@" 1>&2; }

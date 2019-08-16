@@ -32,3 +32,10 @@ ENFORCERD_LOG_LEVEL=
 ENFORCERD_APPCREDS=
 ENFORCERD_OPTS=
 ```
+
+## Tools that will be installed are
+- Aporeto Enforcerd
+- Aporeto apoctl utility
+- jq (JSON CLI Parser)
+- jwt (JSOWN web token parser)
+- enforcer-watch (tails the enforcerd log by looking up active pid)

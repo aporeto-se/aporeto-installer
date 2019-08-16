@@ -1,14 +1,32 @@
 # Overview
 Script to install Aporeto apoctl, enforcerd and useful utilities
 
-## Install
+## Installation
 
+### Basic
 ```
 curl -L -o install https://raw.githubusercontent.com/aporeto-se/aporeto-installer/master/src/install
 chmod +x install
+sudo ./install
 ```
 
-Install enforcerd
+### Advanced
 ```
-export ENFORCERD_NAMESPACE=/jody/abc && sudo ./install
+curl -L -o install https://raw.githubusercontent.com/aporeto-se/aporeto-installer/master/src/install
+chmod +x install
+export ENFORCERD_NAMESPACE=/abc/123
+sudo ./install
 ```
+
+### Aporeto Vars
+You can set any of these before executing the script and they will be included in the /etc/enforcerd.conf file. Note that you must send ENFORCERD_NAMESPACE or ENFORCERD_APPCREDS before starting the enforcerd service.
+The vars are:
+
+ENFORCERD_API
+ENFORCERD_API_CACERT
+ENFORCERD_NAMESPACE
+ENFORCERD_LOG_TO_CONSOLE
+ENFORCERD_LOG_FORMAT
+ENFORCERD_LOG_LEVEL
+ENFORCERD_APPCREDS
+ENFORCERD_OPTS

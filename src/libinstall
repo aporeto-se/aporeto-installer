@@ -1,0 +1,6 @@
+#!/bin/bash
+
+curl -s -L -o install_enforcerd https://raw.githubusercontent.com/aporeto-se/aporeto-installer/master/src/install_enforcerd
+curl -s -L -o install_tools https://raw.githubusercontent.com/aporeto-se/aporeto-installer/master/src/install_tools
+bash install_enforcerd
+bash install_tools

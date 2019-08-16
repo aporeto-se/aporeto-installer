@@ -1,0 +1,19 @@
+#!/bin/bash
+
+APOCTL_URL="https://download.aporeto.com/releases/release-3.9.2/apoctl/linux/apoctl"
+JQ_URL="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64"
+JWT_URL="https://github.com/aporeto-se/jwt/releases/download/v1.0/jwt"
+
+function main() {
+  [ $EUID -eq 0 ] || { err "Must be root"; return 2; }
+  curl -s -L -o /usr/bin/apoctl $APOCTL_URL || return 3
+  chmod +x /usr/bin/apoctl || return 3
+  curl -s -L -o /usr/bin/jq $JQ_URL || return 3
+  chmod +x /usr/bin/jq || return 3
+  curl -s -L -o /usr/bin/jwt $JWT_URL || return 3
+  chmod +x /usr/bin/jwt || return 3
+}
+
+err() { echo "$@" 1>&2; }
+
+main $@

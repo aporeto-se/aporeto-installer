@@ -19,11 +19,14 @@ function enforcerd_install_flavor() {
 
 function enforcerd_install_apt() {
   err "System type is Debian"
-  curl -sSL https://download.aporeto.com/aporeto-packages.gpg | apt-key add - || return 3
-  echo "deb [arch=$(dpkg --print-architecture)] https://repo.aporeto.com/ubuntu/$(lsb_release -cs) aporeto main" > /etc/apt/sources.list.d/aporeto.list || return 3
-  apt update || return 3
+  sudo apt install -y apt-transport-https
+  curl -sSL https://download.aporeto.com/aporeto-packages.gpg | sudo apt-key add -
+  echo "deb [arch=$(dpkg --print-architecture)] \
+    https://repo.aporeto.com/releases/release-3.11.8/debian/$(lsb_release -cs) aporeto main" \
+    | sudo tee /etc/apt/sources.list.d/aporeto.list
+  sudo apt update
+  apt install -y enforcerd
   apt -y install python dnsutils zip unzip
-  apt -y install enforcerd ||:
 }
 
 function enforcerd_install_yum() {

@@ -22,7 +22,7 @@ function enforcerd_install_apt() {
   sudo apt install -y apt-transport-https
   curl -sSL https://download.aporeto.com/aporeto-packages.gpg | sudo apt-key add -
   echo "deb [arch=$(dpkg --print-architecture)] \
-    https://repo.aporeto.com/releases/release-3.11.8/debian/$(lsb_release -cs) aporeto main" \
+    https://repo.aporeto.com/releases/release-3.14.3/debian/$(lsb_release -cs) aporeto main" \
     | sudo tee /etc/apt/sources.list.d/aporeto.list
   sudo apt update
   apt install -y enforcerd
